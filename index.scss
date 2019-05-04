@@ -1,0 +1,63 @@
+#btn {
+  height: 50px;
+  width: 150px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff8a00),
+    to(#da1b60)
+  );
+  background-image: linear-gradient(to right, #ff8a00, #da1b60);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.4rem; // rem , em
+  font-family: Ubuntu;
+  padding: 1.4rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 3px;
+  &:before,
+  &:after {
+    content: "";
+    height: 30%;
+    width: 40%;
+    background: transparent;
+    position: absolute;
+    border: solid;
+    border-color: purple;
+    transition: all 200ms ease-in-out;
+  }
+  &:before {
+    left: -5px;
+    bottom: -5px;
+    border-width: 0px 0px 2px 2px;
+  }
+  &:after {
+    right: -5px;
+    top: -5px;
+    border-width: 2px 2px 0 0;
+  }
+  // hover effect
+  &:hover {
+    &:before,
+    &:after {
+      width: 70%;
+    }
+    &:before {
+      left: 0;
+      height: 0;
+    }
+    &:after {
+      right: 0;
+      height: 0;
+    }
+  }
+}
